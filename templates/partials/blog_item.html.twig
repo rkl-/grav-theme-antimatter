@@ -65,6 +65,12 @@
             {{ page.content }}
         </div>
 
+        {% if config.plugins.socialbuttons.enabled %}
+            <div id="blog-item-social-button">
+                {% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
+            </div>
+        {% endif %}
+
         {% if config.plugins.comments.enabled %}
             {% include 'partials/comments.html.twig' %}
         {% endif %}
