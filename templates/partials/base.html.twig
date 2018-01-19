@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
+    {% include 'google-tag-manager.html.twig' ignore missing %}
+
     {% block stylesheets %}
         {% do assets.addCss('theme://css/pure-0.5.0/grids-min.css', 103) %}
         {% do assets.addCss('theme://css-compiled/nucleus.css', 102) %}
